@@ -13,4 +13,5 @@ ln -fs $ROOT_DIR/project/config/production/supervisor/map_queue_worker.conf /etc
 /usr/bin/supervisorctl update
 /usr/bin/supervisorctl restart map_queue_worker:*
 
+chmod 777 /var/www/map/view/blade
 rm -rf /var/www/map/view/blade/*.php
