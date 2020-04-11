@@ -12,5 +12,3 @@ ln -fs $ROOT_DIR/project/config/production/nginx/map.conf /etc/nginx/sites-enabl
 ln -fs $ROOT_DIR/project/config/production/supervisor/map_queue_worker.conf /etc/supervisor/conf.d/map_queue_worker.conf
 /usr/bin/supervisorctl update
 /usr/bin/supervisorctl restart map_queue_worker:*
-
-ln -fs $ROOT_DIR/project/config/production/crontab/map /etc/cron.d/map
