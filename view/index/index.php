@@ -22,7 +22,7 @@ navigator.geolocation.getCurrentPosition(function (position) {
     var map = new BMapGL.Map("container");          // 创建地图实例
     var point = new BMapGL.Point(gps_longitude, gps_latitude);  // 创建点坐标
 
-    var convertor = new BMap.Convertor();
+    var convertor = new BMapGL.Convertor();
     var pointArr = [];
     pointArr.push(point);
     convertor.translate(pointArr, 1, 5, function (data) {
@@ -30,8 +30,8 @@ navigator.geolocation.getCurrentPosition(function (position) {
 
             var bd_point = data.points[0];
 
-            var marker = new BMap.Marker(bd_point);
-            var label = new BMap.Label("当前在这里",{offset:new BMap.Size(20,-10)});
+            var marker = new BMapGL.Marker(bd_point);
+            var label = new BMapGL.Label("当前在这里",{offset:new BMapGL.Size(20,-10)});
             marker.setLabel(label); //添加百度label
 
             map.addOverlay(marker);
