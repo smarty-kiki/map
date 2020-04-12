@@ -15,12 +15,15 @@
 <body>
     <div id="container"></div>
 <script>
+
+var map = new BMap.Map("container"); // 创建地图实例
+map.enableScrollWheelZoom(true); // 开启鼠标滚轮缩放
+
 navigator.geolocation.getCurrentPosition(function (position) {
 
     var gps_latitude = position.coords.latitude;
     var gps_longitude = position.coords.longitude;
 
-    var map = new BMap.Map("container");          // 创建地图实例
     var point = new BMap.Point(gps_longitude, gps_latitude);  // 创建点坐标
 
     var convertor = new BMap.Convertor();
@@ -37,7 +40,6 @@ navigator.geolocation.getCurrentPosition(function (position) {
 
             map.addOverlay(marker);
             map.centerAndZoom(bd_point, 15); // 初始化地图，设置中心点坐标和地图级别
-            map.enableScrollWheelZoom(true); // 开启鼠标滚轮缩放
         }
     });
 
