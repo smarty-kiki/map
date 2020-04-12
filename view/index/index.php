@@ -4,7 +4,7 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>地图</title>
-    <script type="text/javascript" src="//api.map.baidu.com/api?v=1.0&type=webgl&ak=jWMAZ7jMYfp8r6QDV7q7iZx9lbrIuGc3"></script>
+    <!--script type="text/javascript" src="//api.map.baidu.com/api?v=1.0&type=webgl&ak=jWMAZ7jMYfp8r6QDV7q7iZx9lbrIuGc3"></script-->
     <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=jWMAZ7jMYfp8r6QDV7q7iZx9lbrIuGc3"></script>
     <style type="text/css">
         html{height:100%}
@@ -20,8 +20,8 @@ navigator.geolocation.getCurrentPosition(function (position) {
     var gps_latitude = position.coords.latitude;
     var gps_longitude = position.coords.longitude;
 
-    var map = new BMapGL.Map("container");          // 创建地图实例
-    var point = new BMapGL.Point(gps_longitude, gps_latitude);  // 创建点坐标
+    var map = new BMap.Map("container");          // 创建地图实例
+    var point = new BMap.Point(gps_longitude, gps_latitude);  // 创建点坐标
 
     var convertor = new BMap.Convertor();
     var pointArr = [];
