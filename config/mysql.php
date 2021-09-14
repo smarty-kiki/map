@@ -10,7 +10,7 @@ return [
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'database' => 'default',
-            'username' => 'root',
+            'username' => 'default',
             'password' => 'password',
 
             'read' => [
